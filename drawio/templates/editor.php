@@ -13,8 +13,7 @@
     <iframe id="iframeEditor" width="100%" height="100%" align="top" frameborder="0" name="iframeEditor" onmousewheel="" allowfullscreen=""></iframe>
 
     <script type="text/javascript" nonce="<?php p(base64_encode($_["requesttoken"])) ?>">
-        $( document ).ready(function()
-        {
+        window.addEventListener('load', function() {
         <?php if (!empty($_['error'])) { ?>
             OCA.DrawIO.DisplayError("<?php p($_['error']) ?>");
         <?php } else { ?>
